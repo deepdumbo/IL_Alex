@@ -1,0 +1,7 @@
+# Data files that are too big
+MEDI_toolbox/DICOM_dir/HeadDataQSM.mat
+# 256M
+QSM_Toolbox_GGilbert/Philips.mat
+# 495M
+QSM_Toolbox_GGilbert/QSM.mat
+# 61M
