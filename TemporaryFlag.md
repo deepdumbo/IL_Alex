@@ -25,5 +25,5 @@
 11. Looped_Plotter.m                    (DONE)
 12. Looped_Plotter_scroll.m             (DONE)
 13. MIP_mIP.m                           (DONE)
-14. giffer.m
-15. test_gif.m
+14. giffer.m                            (DONE)
+15. test_gif.m                          (DONE)

@@ -2,38 +2,25 @@
 
 *last update 2020/03/06, Hossein*
 
-Code developed by Alex Ensworth and Veronique Fortier
+Code developed by Alex Ensworth, Veronique Fortier and Guillaume Gilbert
 
-## What is the aim of this project?
+## aim of this project
 
-## What are the main scripts?
+The purpose of this project is to explore the impact of unrwapping and background removal on various QSMs
 
-## What are the data needed?
-
-## What are the complementary code developed by the student?
-
-## what are the external toolboxes this code needs?
-
-## What are the toolboxable codes?
-------------------------------------------------------------------
-# Quantitative Suseptibility Mapping
-*last update 2020/03/04*
-
-Code developed by Alex Ensworth
-
-*???The purpose of this project is to explore the impact of unrwapping and background removal on various QSMs.???*
-
-The main scritps in this project are listed in the order that they should be run
+## main scripts
 
 ---
     Remove_MEDI_influence_runme.m
 ---
 
-## Functional Dependencies 
+## data needed?
 
-The script above uses several packages and functions developed internally and by other institutions. The user must make sure the packages are added to path of the script `Remove_MEDI_influence_runme.m`.
+---
+    Data/Saved_preQSM_data
+---
 
-The list of the external packages is presented bellow.
+## External toolboxes needed
 
 ---
     Medi_toolbox
@@ -47,10 +34,41 @@ The list of the external packages is presented bellow.
     Veroniques SWIM implementation
 ---
 
-The list of the complementary functions and scripts that are either called in `Remove_MEDI_influence_runme.m` or called on the outputs of the the named script is presented bellow. 
+## Toolboxable code developed by the student
 
 ---
-    Plotter2.m
-    'Results Analysis scripts coded by Alex'  
+    TemporalUnwrapping
+    LineExtract
+    GetStatisticsForROI_same_region
+    MIP_mIP
+    Plotter2
+    Montage_Plotter
+    giffer
 ---
+
+## Complemantary code developed by the student
+
+---
+    Results Analysis scripts coded by Alex/
+        AlexTemporalUnwrappingUseRsquared.m  
+        LineExtract_UnwrapRDF.m            
+        PlotLPtogether_combined_echo.m
+        CombinedUnwrappVsRDF.m               
+        Looped_Plotter.m                   
+        test_gif.m
+        CombinationEchoResiduals.m           
+        LineExtract_WrapUnwrap.m           
+        PlotMedians.m
+        Compare_unwraps.m                    
+        Looped_Plotter_scroll.m            
+        WrappedUnwrappedManyTechniques.m
+        MIP_mIP.m
+        Plotter2.m
+        AlexTemporalUnwrapping.m             
+        GetStatisticsForROI_same_region.m  
+        Montage_Plotter.m      
+        giffer.m                           
+        Plot_phase_dif.m
+---
+
 
