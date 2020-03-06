@@ -1,3 +1,21 @@
+# ISMRM Reproducibility Challenge
+
+*last update 2020/03/06, Hossein*
+
+Code developed by Alex Ensworth and Veronique Fortier
+
+## What is the aim of this project?
+
+## What are the main scripts?
+
+## What are the data needed?
+
+## What are the complementary code developed by the student?
+
+## what are the external toolboxes this code needs?
+
+## What are the toolboxable codes?
+------------------------------------------------------------------
 # Quantitative Suseptibility Mapping
 *last update 2020/03/04*
 

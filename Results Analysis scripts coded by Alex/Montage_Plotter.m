@@ -1,8 +1,21 @@
+%{
+    Last update on 2020/03/06, Hossein
+    
+    This script loads different images, resizes them and montages them all in the same figure. 
+    the sections in this script are the following
+
+    1. make the desired figures (or load saved figures)
+    2. crop the images by either
+        - specififing boundary coordniates
+        - viewing the image and drawing the boundary on it
+    3. put the images together and save them 
+%}
+
 %function[]=Montage_Plotter(images)
 % images.slice=65;
 close all
 
-% 
+%% 1. make the desired figures (or load saved figures)
 % figure('Position', [0,0,1920,1080], 'Menu','none','ToolBar','none'); 
 % imagesc(OriginalMEDIUnwrap_QSM(:,:,images.slice),[-0.3,0.3])
 % axis image
@@ -44,7 +57,7 @@ close all
 % print(gcf, './MontagePlots/image5','-dpng','-r300')
 % close
 
-
+%% 2. crop the images by either
 % This is the crop that worked for my home comp
 % Image1=imcrop(imread('./MontagePlots/image1.png'), [1733 254 2744 2744]);
 % Image2=imcrop(imread('./MontagePlots/image2.png'), [1733 254 2744 2744]);
@@ -59,9 +72,9 @@ close all
 % Image4=imcrop(imread('./MontagePlots/image4.png'), [1759 251 2696 2696]);
 
 %This is the crop that works for the work comp on 600dpi
-Image1=imcrop(imread('./MontagePlots/image1.png'), [527 44 908 848]);
-Image2=imcrop(imread('./MontagePlots/image2.png'), [527 44 908 848]);
-Image3=imcrop(imread('./MontagePlots/image3.png'), [527 44 908 848]);
+% Image1=imcrop(imread('./MontagePlots/image1.png'), [527 44 908 848]);
+% Image2=imcrop(imread('./MontagePlots/image2.png'), [527 44 908 848]);
+% Image3=imcrop(imread('./MontagePlots/image3.png'), [527 44 908 848]);
 
 % Home computer, old head data crop
 % Image1=imcrop(imread('./MontagePlots/image1.png'), [2336 255 1540 2744]);
@@ -69,16 +82,15 @@ Image3=imcrop(imread('./MontagePlots/image3.png'), [527 44 908 848]);
 % Image3=imcrop(imread('./MontagePlots/image3.png'), [2336 255 1540 2748]);
 
 %As an aside - to determine the crop, use this code:
-% figure('Position', [0,0,1920,1080], 'Menu','none','ToolBar','none'); 
-% imagesc(OriginalMEDIUnwrap_QSM(:,:,images.slice))
-% axis image
-% axis off
-% colormap(bone)
-% print(gcf, './MontagePlots/image1','-dpng','-r600')
+figure('Position', [0,0,1920,1080], 'Menu','none','ToolBar','none'); 
+imagesc(OriginalMEDIUnwrap_QSM(:,:,images.slice))
+axis image
+axis off
+colormap(bone)
+print(gcf, './MontagePlots/image1','-dpng','-r600')
+[J,rect2] = imcrop(imread('./MontagePlots/image1.png'));
 
-%[J,rect2] = imcrop(imread('./MontagePlots/image1.png'));
-
-
+%% 3. put the images together and save them
 FileSave='QSM_data_comparison';
 
 montage({Image1, Image2, Image3}, 'Size', [1 3]);

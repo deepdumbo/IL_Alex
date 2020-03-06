@@ -3,10 +3,10 @@
 
     This script draws a line on QSM image and plots the phase of the voxels accross that line. 
 
-    input: QSM images all 5 echos
+    input: QSM images at the CombinedUnwrap stage of the pipeline. images of all 5 echos
     output: plots of phase across one line in the images
-
 %}
+
 %% download the data
 
 % close all

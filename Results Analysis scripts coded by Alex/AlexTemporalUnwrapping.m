@@ -1,4 +1,13 @@
+%{
+    last update 2020/03/06, Hossein
+    *Does not work for now*
 
+    a Function that does temporal phase unrwapping.
+    input:  images with spatially unwrapped phase
+            TE
+            Mask
+    Output: images unwrapped in time
+%}
 [file,path] = uigetfile('*.mat');
 if isequal(file,0)
    disp('User selected Cancel');

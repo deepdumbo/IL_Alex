@@ -1,3 +1,19 @@
+%{
+    last update 2020/03/06, Hossein
+    
+    a script that extract the following fields from QSM images and sets the related parameters.
+    Then, make the figures mentioned bellow: 
+
+    Extracted Fields
+        Mask, SEG_iFreq, QGRG_iFreq, SEG_RDF, QGRG_RDF, RDFSeg, RDFQgrg, RDFsegLP, RDFqgrgLP
+
+    Parameters Set
+        xcoord, y, x, limity
+
+    figures made
+    imagesc(RDFSeg, imagesc(RDFQgrg, plot(RDFsegLP, plot(RDFqgrgLP
+%}
+
 %% download the data
 %load('C:\Users\alexe\OneDrive - McGill University\Alex MSc Thesis Research\QSM\Acquired data Dec 13 2019\Saved_MAT_files\run1_Mask_erosion_4_Quality-Guided-Vero_PDF_iSWIMvero.mat')
 % [file,path] = uigetfile('*.mat');

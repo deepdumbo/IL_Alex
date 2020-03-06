@@ -1,3 +1,12 @@
+%{
+    last update 2020/03/06, Hossein
+
+    This script draws a line on QSM image and plots the phase of the voxels accross that line. 
+
+    input: QSM images at UnwrapRDF stage of the pipeline. images of all 5 echos
+    output: plots of phase across one line in the images
+%}
+
 %% download the data
 %load('C:\Users\alexe\OneDrive - McGill University\Alex MSc Thesis Research\QSM\Acquired data Dec 13 2019\Saved_MAT_files\run1_Mask_erosion_4_Quality-Guided-Vero_PDF_iSWIMvero.mat')
 [file,path] = uigetfile('*.mat');
