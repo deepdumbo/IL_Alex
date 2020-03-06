@@ -12,9 +12,9 @@
     
 ## to add comment by Hossein to these scripts
 
-1. Remove_MEDI_influence_runme.m (DONE)
-2. plotter2 (DONE)
-3. GetStatisticsForROI_same_region
+1. Remove_MEDI_influence_runme.m    (DONE)
+2. plotter2                         (DONE)
+3. GetStatisticsForROI_same_region  (DONE)
 4. LineExtract_CombinedUnwrap.m  
 5. LineExtract_UnwrapRDF.m  
 6. LineExtract_WrapUnwrap.m
