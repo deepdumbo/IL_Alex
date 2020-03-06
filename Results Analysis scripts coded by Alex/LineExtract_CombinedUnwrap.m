@@ -4,15 +4,15 @@
 %}
 %% download the data
 
-close all
-clear
-[file,path] = uigetfile('*.mat');
-if isequal(file,0)
-   disp('User selected Cancel');
-   return
-else
-   load(fullfile(path,file));
-end
+% close all
+% clear
+% [file,path] = uigetfile('*.mat');
+% if isequal(file,0)
+%    disp('User selected Cancel');
+%    return
+% else
+%    load(fullfile(path,file));
+% end
 
 
 FigSaveLocation='D:\AlexEnsworth\CurrentDataAndFigs\Figures\';
@@ -27,7 +27,7 @@ PhaseData=mask_4D.*PhaseData;
 set(gcf, 'Position', get(0,'Screensize'))
 
 k=5;
-slice=45;
+slice=59;
 xcoord = ceil((images.matrix_size(1))*0.54);   
 
 x = [xcoord xcoord];
@@ -92,8 +92,8 @@ title(sprintf('Line profile of combined, unwrapped phase'));
 %% Save all
 
 %   Save for unwrapped + RDF comparison
-saveas(gcf, [FigSaveLocation, images.dataset '_Unwrapped_line_plot_with_' images.UnwrapType '_all_echoes_and_combined_' images.TU])
-print(gcf, [FigSaveLocation, images.dataset '_Unwrapped_line_plot_with_' images.UnwrapType '_all_echoes_and_combined_' images.TU],'-dpng','-r600')
+% saveas(gcf, [FigSaveLocation, images.dataset '_Unwrapped_line_plot_with_' images.UnwrapType '_all_echoes_and_combined_' images.TU '_slice_' num2str(slice)])
+% print(gcf, [FigSaveLocation, images.dataset '_Unwrapped_line_plot_with_' images.UnwrapType '_all_echoes_and_combined_' images.TU '_slice_' num2str(slice)],'-dpng','-r600')
 
 %% Extras
 

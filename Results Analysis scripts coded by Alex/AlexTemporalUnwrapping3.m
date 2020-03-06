@@ -19,7 +19,7 @@ for h=1:numslices
  
 
     for jj=1:(numechoes-1)
-        if diff(jj)>(1.5*pi)
+        if diff(jj)>(1.2*pi)
             SpatUnwrappedPhase(:,:,h,jj+1)=(SpatUnwrappedPhase(:,:,h,jj+1)-(2*pi)).*Mask(:,:,h);
             for i=1:numechoes
                 TheMedians(i) = median(nonzeros(SpatUnwrappedPhase(:,:,h,i)));
@@ -27,7 +27,7 @@ for h=1:numslices
             for j = 1:(numechoes-1)
                 diff(j)=TheMedians(j+1)-TheMedians(j);
             end
-        elseif diff(jj)<(-1.5*pi)
+        elseif diff(jj)<(-1.2*pi)
             SpatUnwrappedPhase(:,:,h,jj+1)=(SpatUnwrappedPhase(:,:,h,jj+1)+(2*pi)).*Mask(:,:,h);
             for i=1:numechoes
                 TheMedians(i) = median(nonzeros(SpatUnwrappedPhase(:,:,h,i)));

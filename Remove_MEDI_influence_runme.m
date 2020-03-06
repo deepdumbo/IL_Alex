@@ -221,8 +221,8 @@ images.Neg_Mask=Neg_Mask;
 % For SEGUE
 Inputs.Mask = Mask;
 Inputs.Phase = PhaseData;
-[UPhaseData]=SEGUE(Inputs); images.UnwrapType='SEGUE';  
-PhaseData=UPhaseData; 
+[PhaseData]=SEGUE(Inputs); images.UnwrapType='SEGUE';  
+
 
 % For all other unwrapping techniques
 % for jj=1:size(TE,2)    
@@ -238,14 +238,14 @@ PhaseData=UPhaseData;
 %  end
 % clear UPhaseData;
 
-% tic
-% disp('Temporal Unwrap Started')
-% PhaseData = AlexTemporalUnwrapping3(PhaseData, Mask);
-% images.TU='TUused';
-% toc
-% disp('Temporal Unwrap Finished')
+tic
+disp('Temporal Unwrap Started')
+PhaseData = AlexTemporalUnwrapping3(PhaseData, Mask);
+images.TU='TUused';
+toc
+disp('Temporal Unwrap Finished')
 
-images.TU='TUnotused';
+% images.TU='TUnotused';
 
 PhaseData=mask_4D.*PhaseData;
 MagnData=mask_4D.*MagnData;
